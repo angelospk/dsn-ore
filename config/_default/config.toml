@@ -1,0 +1,23 @@
+title = "ΔΣ Νέων Ορεστιάδας"
+baseURL = "https://angelospk.github.io/dsn-ore/"
+copyright = "© 2025 ΔΣ Νέων Ορεστιάδας"
+defaultContentLanguage = "el"
+hasCJKLanguage = false
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+permalinks = { post = "/:slug/" }
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON", "WebAppManifest"]
+  section = ["HTML", "RSS"]
+
+[mediaTypes."application/manifest+json"]
+  suffixes = ["webmanifest"]
+
+[outputFormats.WebAppManifest]
+  mediaType = "application/manifest+json"
+  rel = "manifest"

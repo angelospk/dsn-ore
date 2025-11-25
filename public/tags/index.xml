@@ -6,6 +6,22 @@
     <description>Recent content in Tags on ΔΣ Νέων Ορεστιάδας</description>
     <generator>Hugo</generator>
     <language>el</language>
+    <copyright>© 2025 ΔΣ Νέων Ορεστιάδας</copyright>
+    <lastBuildDate>Tue, 25 Nov 2025 12:00:00 +0200</lastBuildDate>
     <atom:link href="https://angelospk.github.io/dsn-ore/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Announcement</title>
+      <link>https://angelospk.github.io/dsn-ore/tags/announcement/</link>
+      <pubDate>Tue, 25 Nov 2025 12:00:00 +0200</pubDate>
+      <guid>https://angelospk.github.io/dsn-ore/tags/announcement/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>News</title>
+      <link>https://angelospk.github.io/dsn-ore/tags/news/</link>
+      <pubDate>Tue, 25 Nov 2025 12:00:00 +0200</pubDate>
+      <guid>https://angelospk.github.io/dsn-ore/tags/news/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

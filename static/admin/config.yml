@@ -9,16 +9,23 @@ public_folder: "/dsn-ore/uploads"
 
 collections:
   - name: "posts"
-    label: "Ανακοινώσεις"
-    folder: "content/posts"
+    label: "Άρθρα"
+    folder: "content/post"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Τίτλος", name: "title", widget: "string"}
       - {label: "Ημερομηνία", name: "date", widget: "datetime"}
-      - {label: "Εικόνα", name: "image", widget: "image", required: false}
-      - {label: "Περίληψη", name: "description", widget: "text"}
+      - {label: "Περίληψη", name: "summary", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Κείμενο", name: "body", widget: "markdown"}
+      - label: "Εικόνα"
+        name: "image"
+        widget: "object"
+        fields:
+          - {label: "Αρχείο", name: "filename", widget: "image"}
+          - {label: "Λεζάντα", name: "caption", widget: "string", required: false}
+          - {label: "Alt Text", name: "alt_text", widget: "string", required: false}
 
   - name: "pages"
     label: "Σελίδες"
@@ -28,4 +35,5 @@ collections:
         file: "content/about/_index.md"
         fields:
           - {label: "Τίτλος", name: "title", widget: "string"}
+          - {label: "Περίληψη", name: "summary", widget: "text"}
           - {label: "Κείμενο", name: "body", widget: "markdown"}

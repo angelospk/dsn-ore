@@ -2,65 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://angelospk.github.io/dsn-ore/posts/2025-11-25-new/</loc>
-    <lastmod>2025-11-25T18:58:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/posts/</loc>
-    <lastmod>2025-11-25T18:58:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/</loc>
-    <lastmod>2025-11-25T18:58:00+00:00</lastmod>
+    <loc>http://localhost:1313/dsn-ore/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://angelospk.github.io/dsn-ore/en/"
+                href="http://localhost:1313/dsn-ore/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://angelospk.github.io/dsn-ore/"
+                href="http://localhost:1313/dsn-ore/categories/"
                 />
   </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/posts/2025-11-25-test/</loc>
-    <lastmod>2025-11-25T18:19:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/en/posts/hello-world/</loc>
-    <lastmod>2025-11-25T12:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/en/</loc>
-    <lastmod>2025-11-25T12:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/posts/hello-world/</loc>
-    <lastmod>2025-11-25T12:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/en/about/</loc>
-    <lastmod>2025-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/about/</loc>
-    <lastmod>2025-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/categories/</loc>
+    <loc>http://localhost:1313/dsn-ore/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://angelospk.github.io/dsn-ore/en/categories/"
+                href="http://localhost:1313/dsn-ore/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://angelospk.github.io/dsn-ore/categories/"
+                href="http://localhost:1313/dsn-ore/tags/"
                 />
   </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/tags/</loc>
+    <loc>http://localhost:1313/dsn-ore/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://angelospk.github.io/dsn-ore/en/tags/"
+                href="http://localhost:1313/dsn-ore/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://angelospk.github.io/dsn-ore/tags/"
+                href="http://localhost:1313/dsn-ore/"
                 />
   </url>
 </urlset>

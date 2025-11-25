@@ -1,0 +1,19 @@
+[[main]]
+  name = "Αρχική"
+  url = "/"
+  weight = 10
+
+[[main]]
+  name = "Νέα"
+  url = "/post/"
+  weight = 20
+
+[[main]]
+  name = "Σχετικά"
+  url = "/#about"
+  weight = 30
+
+[[main]]
+  name = "Επικοινωνία"
+  url = "/#contact"
+  weight = 40
