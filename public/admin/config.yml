@@ -4,36 +4,18 @@ backend:
   branch: main
   base_url: ""
 
-media_folder: "static/uploads"
-public_folder: "/dsn-ore/uploads"
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
 collections:
-  - name: "posts"
+  - name: "blog"
     label: "Άρθρα"
-    folder: "content/post"
+    folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Τίτλος", name: "title", widget: "string"}
-      - {label: "Ημερομηνία", name: "date", widget: "datetime"}
-      - {label: "Περίληψη", name: "summary", widget: "text"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Ημερομηνία", name: "pubDate", widget: "datetime"}
+      - {label: "Περίληψη", name: "description", widget: "text"}
+      - {label: "Εικόνα", name: "heroImage", widget: "image", required: false}
       - {label: "Κείμενο", name: "body", widget: "markdown"}
-      - label: "Εικόνα"
-        name: "image"
-        widget: "object"
-        fields:
-          - {label: "Αρχείο", name: "filename", widget: "image"}
-          - {label: "Λεζάντα", name: "caption", widget: "string", required: false}
-          - {label: "Alt Text", name: "alt_text", widget: "string", required: false}
-
-  - name: "pages"
-    label: "Σελίδες"
-    files:
-      - label: "About Page"
-        name: "about"
-        file: "content/about/_index.md"
-        fields:
-          - {label: "Τίτλος", name: "title", widget: "string"}
-          - {label: "Περίληψη", name: "summary", widget: "text"}
-          - {label: "Κείμενο", name: "body", widget: "markdown"}

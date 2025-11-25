@@ -2,33 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://angelospk.github.io/dsn-ore/new/</loc>
-    <lastmod>2025-11-25T18:58:00+00:00</lastmod>
+    <loc>//localhost:1313/</loc>
   </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/post/</loc>
-    <lastmod>2025-11-25T18:58:00+00:00</lastmod>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/test/</loc>
-    <lastmod>2025-11-25T18:19:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/tags/announcement/</loc>
-    <lastmod>2025-11-25T12:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/tags/news/</loc>
-    <lastmod>2025-11-25T12:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/tags/</loc>
-    <lastmod>2025-11-25T12:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/%CE%B7-%CE%B9%CF%83%CF%84%CE%BF%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-%CE%BC%CE%B1%CF%82-%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9-%CF%83%CF%84%CE%BF%CE%BD-%CE%B1%CE%AD%CF%81%CE%B1/</loc>
-    <lastmod>2025-11-25T12:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/</loc>
-    <lastmod>2025-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/about/</loc>
-    <lastmod>2025-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/categories/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>

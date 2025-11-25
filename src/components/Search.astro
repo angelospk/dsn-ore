@@ -1,0 +1,74 @@
+---
+import '@pagefind/default-ui/css/ui.css';
+---
+
+<div id="search" class="ml-3"></div>
+
+<script>
+	window.addEventListener('DOMContentLoaded', (event) => {
+		new PagefindUI({
+			element: '#search',
+			showSubResults: true,
+            translations: {
+                placeholder: "Αναζήτηση...",
+                clear_search: "Καθαρισμός",
+                load_more: "Περισσότερα αποτελέσματα",
+                search_label: "Αναζήτηση σε αυτό το site",
+                filters_label: "Φίλτρα",
+                zero_results: "Δεν βρέθηκαν αποτελέσματα για [SEARCH_TERM]",
+                many_results: "[COUNT] αποτελέσματα για [SEARCH_TERM]",
+                one_result: "[COUNT] αποτέλεσμα για [SEARCH_TERM]",
+                alt_search: "Δεν βρέθηκαν αποτελέσματα για [SEARCH_TERM]. Μήπως εννοούσατε [DIFFERENT_TERM];",
+                search_suggestion: "Δεν βρέθηκαν αποτελέσματα για [SEARCH_TERM]. Δοκιμάστε μία από τις παρακάτω αναζητήσεις:",
+                searching: "Αναζήτηση για [SEARCH_TERM]..."
+            }
+		});
+	});
+</script>
+
+<style is:global>
+    /* Pagefind Overrides for Dark/Light Mode */
+    :root {
+        --pagefind-ui-scale: 0.8;
+        --pagefind-ui-primary: #3b82f6;
+        --pagefind-ui-text: var(--text-color);
+        --pagefind-ui-background: var(--card-bg);
+        --pagefind-ui-border: var(--card-border);
+        --pagefind-ui-tag: var(--card-border);
+        --pagefind-ui-border-width: 1px;
+        --pagefind-ui-border-radius: 8px;
+        --pagefind-ui-image-border-radius: 8px;
+        --pagefind-ui-image-box-ratio: 3 / 2;
+        --pagefind-ui-font: 'Segoe UI', sans-serif;
+    }
+
+    #search .pagefind-ui__search-input {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        border: 1px solid var(--card-border);
+    }
+    
+    #search .pagefind-ui__drawer {
+        background-color: var(--card-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        padding: 1rem;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 300px;
+        max-height: 400px;
+        overflow-y: auto;
+        box-shadow: var(--card-shadow);
+        z-index: 1001;
+    }
+
+    #search .pagefind-ui__result-link {
+        color: var(--text-color);
+    }
+
+    #search .pagefind-ui__result-excerpt {
+        color: var(--text-muted);
+    }
+</style>
