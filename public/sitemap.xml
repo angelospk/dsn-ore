@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://example.org/el/sitemap.xml</loc>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+      <loc>https://angelospk.github.io/dsn-ore/categories/</loc>
+    </url>
     
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://example.org/en/sitemap.xml</loc>
+    <url>
+      <loc>https://angelospk.github.io/dsn-ore/tags/</loc>
+    </url>
     
-  </sitemap>
-  
-</sitemapindex>
+    <url>
+      <loc>https://angelospk.github.io/dsn-ore/</loc>
+    </url>
+    </urlset>

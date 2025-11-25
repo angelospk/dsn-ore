@@ -1,17 +1,29 @@
-baseURL = 'https://example.org/'
-title = 'My Council Site'
-theme = 'ananke'
-defaultContentLanguage = 'el'
+baseURL = "https://angelospk.github.io/dsn-ore/"
+languageCode = "el-gr"
+title = "ΔΣ Νέων Ορεστιάδας"
+theme = "hugo-dpsg"
 
-[languages]
-  [languages.el]
-    languageName = 'Ελληνικά'
+[params]
+  description = "Επίσημη ιστοσελίδα ΔΣ Νέων"
+  # Χρώματα (μπορείς να τα αλλάξεις αργότερα)
+  color = "blue" # Επιλογές: orange, blue, green, red
+
+[params.logo]
+  image = "/images/logo.png"
+  header = "/images/header.jpg" # Required by theme
+  title = "ΔΣ Νέων Ορεστιάδας"
+  subtitle = "Επίσημη ιστοσελίδα"
+
+[menu]
+  [[menu.main]]
+    name = "Αρχική"
+    url = "/"
     weight = 1
-    title = 'Ο Ιστότοπός Μου'
-    contentDir = 'content/el'
-
-  [languages.en]
-    languageName = 'English'
+  [[menu.main]]
+    name = "Νέα"
+    url = "/posts/"
     weight = 2
-    title = 'My Website'
-    contentDir = 'content/en'
+  [[menu.main]]
+    name = "Σχετικά"
+    url = "/about/"
+    weight = 3
