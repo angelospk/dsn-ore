@@ -9,6 +9,18 @@ theme = "ananke"
     title = "ΔΣ Νέων Ορεστιάδας"
     [languages.el.params]
       description = "Επίσημη ιστοσελίδα"
+    [[languages.el.menu.main]]
+      name = "Αρχική"
+      url = "/dsn-ore/"
+      weight = 1
+    [[languages.el.menu.main]]
+      name = "Νέα"
+      url = "/dsn-ore/posts/"
+      weight = 2
+    [[languages.el.menu.main]]
+      name = "Σχετικά"
+      url = "/dsn-ore/about/"
+      weight = 3
 
   [languages.en]
     languageName = "English"
@@ -16,6 +28,18 @@ theme = "ananke"
     title = "Youth Council of Orestiada"
     [languages.en.params]
       description = "Official website"
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "/dsn-ore/en/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "News"
+      url = "/dsn-ore/en/posts/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/dsn-ore/en/about/"
+      weight = 3
 
 [params]
   favicon = ""
@@ -23,3 +47,6 @@ theme = "ananke"
   description = "Επίσημη ιστοσελίδα"
   featured_image = ""
   recent_posts_number = 3
+  custom_css = ["css/custom.css"]
+  background_color_class = "bg-near-white"
+  body_classes = "sans-serif"

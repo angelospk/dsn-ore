@@ -2,8 +2,6 @@
 title: "About Us"
 date: 2025-11-25
 description: "A few words about the institution and our team."
-menu: "main"
-weight: 2
 ---
 
 ### The Institution

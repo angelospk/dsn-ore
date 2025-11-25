@@ -2,12 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://angelospk.github.io/dsn-ore/en/about/</loc>
-    <lastmod>2025-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://angelospk.github.io/dsn-ore/about/</loc>
-    <lastmod>2025-11-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://angelospk.github.io/dsn-ore/posts/</loc>
     <lastmod>2025-11-25T18:58:00+00:00</lastmod>
   </url><url>
@@ -35,6 +29,12 @@
   </url><url>
     <loc>https://angelospk.github.io/dsn-ore/posts/hello-world/</loc>
     <lastmod>2025-11-25T12:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://angelospk.github.io/dsn-ore/en/about/</loc>
+    <lastmod>2025-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://angelospk.github.io/dsn-ore/about/</loc>
+    <lastmod>2025-11-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://angelospk.github.io/dsn-ore/categories/</loc>
     <xhtml:link
