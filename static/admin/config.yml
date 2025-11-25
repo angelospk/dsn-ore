@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: angelospk/dsn-ore
-  branch: master
+  branch: main
   base_url: ""
 
 media_folder: "static/uploads"
