@@ -1,29 +1,13 @@
-baseURL = "https://angelospk.github.io/dsn-ore/"
-languageCode = "el-gr"
+# ΑΝΤΙΚΑΤΕΣΤΗΣΕ ΤΑ ΚΕΦΑΛΑΙΑ ΜΕ ΤΑ ΔΙΚΑ ΣΟΥ
+baseURL = "https://angelospk.github.io/dsn-ore/" 
+languageCode = "el"
 title = "ΔΣ Νέων Ορεστιάδας"
-theme = "hugo-dpsg"
+theme = "ananke" # Θα χρησιμοποιήσουμε το Ananke για σταθερότητα τώρα
+
+# ΑΥΤΟ ΛΥΝΕΙ ΤΟ ΠΡΟΒΛΗΜΑ ΜΕ ΤΑ LINK ΣΤΟΝ ΥΠΟΦΑΚΕΛΟ
+canonifyURLs = true
+relativeURLs = false
 
 [params]
-  description = "Επίσημη ιστοσελίδα ΔΣ Νέων"
-  # Χρώματα (μπορείς να τα αλλάξεις αργότερα)
-  color = "blue" # Επιλογές: orange, blue, green, red
-
-[params.logo]
-  image = "/images/logo.png"
-  header = "/images/header.jpg" # Required by theme
-  title = "ΔΣ Νέων Ορεστιάδας"
-  subtitle = "Επίσημη ιστοσελίδα"
-
-[menu]
-  [[menu.main]]
-    name = "Αρχική"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Νέα"
-    url = "/posts/"
-    weight = 2
-  [[menu.main]]
-    name = "Σχετικά"
-    url = "/about/"
-    weight = 3
+  description = "Επίσημη ιστοσελίδα"
+  # Προσοχή: Στο Ananke η εικόνα λέγεται featured_image
