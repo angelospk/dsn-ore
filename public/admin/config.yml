@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_USERNAME/YOUR_REPO # REPLACE THIS WITH YOUR REPO
+  repo: angelospk/dsn-ore
   branch: main
   auth_type: implicit
 
