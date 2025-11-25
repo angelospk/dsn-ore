@@ -77,11 +77,14 @@ const posts = (await getCollection('blog')).sort(
 					))
 				}
 			</div>
+			<div style="text-align: center; margin-top: 3rem;">
+				<a href="/dsn-ore/blog" class="btn btn-primary fade-in">Όλα τα νέα →</a>
+			</div>
 		</div>
 	</section>
 
 	<!-- Contact Section -->
-	<section class="features" id="contact" style="background: #1e293b;">
+	<section class="features" id="contact" style="background: var(--bg-color-alt); transition: background-color 0.3s;">
 		<div class="container">
 			<h2 class="section-title fade-in">Επικοινωνία</h2>
 			<p class="section-subtitle fade-in">Ελάτε σε επαφή μαζί μας</p>
@@ -227,8 +230,9 @@ const posts = (await getCollection('blog')).sort(
 		/* Features Section */
 		.features {
 			padding: 6rem 2rem;
-			background: #1e293b;
+			background: var(--bg-color-alt);
 			position: relative;
+            transition: background-color 0.3s;
 		}
 
 		.feature-grid {
@@ -238,10 +242,10 @@ const posts = (await getCollection('blog')).sort(
 		}
 
 		.feature-card {
-			background: rgba(255, 255, 255, 0.05);
+			background: var(--card-bg);
 			border-radius: 16px;
 			padding: 2rem;
-			border: 1px solid rgba(59, 130, 246, 0.2);
+			border: 1px solid var(--card-border);
 			transition: all 0.4s;
 			cursor: pointer;
 			backdrop-filter: blur(10px);
@@ -250,8 +254,8 @@ const posts = (await getCollection('blog')).sort(
 		.feature-card:hover {
 			transform: translateY(-10px) scale(1.02);
 			border-color: #3b82f6;
-			background: rgba(59, 130, 246, 0.1);
-			box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+			background: var(--card-bg);
+			box-shadow: var(--card-shadow);
 		}
 
 		.feature-icon {
@@ -275,11 +279,11 @@ const posts = (await getCollection('blog')).sort(
 			font-size: 1.5rem;
 			margin-bottom: 1rem;
 			text-align: center;
-			color: #f1f5f9;
+			color: var(--text-color);
 		}
 
 		.feature-description {
-			color: #cbd5e1;
+			color: var(--text-muted);
 			text-align: center;
 			line-height: 1.6;
 		}
@@ -287,7 +291,8 @@ const posts = (await getCollection('blog')).sort(
 		/* News Section */
 		.news {
 			padding: 6rem 2rem;
-			background: #0f172a;
+			background: var(--bg-color);
+            transition: background-color 0.3s;
 		}
 
 		.news-grid {
@@ -298,10 +303,10 @@ const posts = (await getCollection('blog')).sort(
 		}
 
 		.news-card {
-			background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(59, 130, 246, 0.1));
+			background: var(--card-bg);
 			border-radius: 16px;
 			overflow: hidden;
-			border: 1px solid rgba(59, 130, 246, 0.3);
+			border: 1px solid var(--card-border);
 			transition: all 0.4s;
 			cursor: pointer;
 			display: block;
@@ -310,7 +315,7 @@ const posts = (await getCollection('blog')).sort(
 		.news-card:hover {
 			transform: translateY(-8px);
 			border-color: #3b82f6;
-			box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+			box-shadow: var(--card-shadow);
 		}
 
 		.news-content {
@@ -326,11 +331,11 @@ const posts = (await getCollection('blog')).sort(
 		.news-title {
 			font-size: 1.5rem;
 			margin-bottom: 1rem;
-			color: #f1f5f9;
+			color: var(--text-color);
 		}
 
 		.news-excerpt {
-			color: #cbd5e1;
+			color: var(--text-muted);
 			line-height: 1.6;
 		}
 
