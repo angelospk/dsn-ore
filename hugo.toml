@@ -1,0 +1,17 @@
+baseURL = 'https://example.org/'
+title = 'My Council Site'
+theme = 'ananke'
+defaultContentLanguage = 'el'
+
+[languages]
+  [languages.el]
+    languageName = 'Ελληνικά'
+    weight = 1
+    title = 'Ο Ιστότοπός Μου'
+    contentDir = 'content/el'
+
+  [languages.en]
+    languageName = 'English'
+    weight = 2
+    title = 'My Website'
+    contentDir = 'content/en'

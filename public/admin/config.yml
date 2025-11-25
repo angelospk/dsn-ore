@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: YOUR_USERNAME/YOUR_REPO # REPLACE THIS WITH YOUR REPO
+  branch: main
+  auth_type: implicit
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts_el"
+    label: "Άρθρα (Ελληνικά)"
+    folder: "content/el/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Τίτλος", name: "title", widget: "string"}
+      - {label: "Ημερομηνία", name: "date", widget: "datetime"}
+      - {label: "Κεντρική Εικόνα", name: "featured_image", widget: "image", required: false}
+      - {label: "Κείμενο", name: "body", widget: "markdown"}
+
+  - name: "posts_en"
+    label: "Posts (English)"
+    folder: "content/en/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages_el"
+    label: "Σελίδες (Ελληνικά)"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/el/about.md"
+        fields:
+          - {label: "Τίτλος", name: "title", widget: "string"}
+          - {label: "Κείμενο", name: "body", widget: "markdown"}
+
+  - name: "pages_en"
+    label: "Pages (English)"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/en/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
