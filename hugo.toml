@@ -1,13 +1,25 @@
-# ΑΝΤΙΚΑΤΕΣΤΗΣΕ ΤΑ ΚΕΦΑΛΑΙΑ ΜΕ ΤΑ ΔΙΚΑ ΣΟΥ
 baseURL = "https://angelospk.github.io/dsn-ore/" 
-languageCode = "el"
-title = "ΔΣ Νέων Ορεστιάδας"
-theme = "ananke" # Θα χρησιμοποιήσουμε το Ananke για σταθερότητα τώρα
+defaultContentLanguage = "el"
+theme = "ananke"
 
-# ΑΥΤΟ ΛΥΝΕΙ ΤΟ ΠΡΟΒΛΗΜΑ ΜΕ ΤΑ LINK ΣΤΟΝ ΥΠΟΦΑΚΕΛΟ
-canonifyURLs = true
-relativeURLs = false
+[languages]
+  [languages.el]
+    languageName = "Ελληνικά"
+    weight = 1
+    title = "ΔΣ Νέων Ορεστιάδας"
+    [languages.el.params]
+      description = "Επίσημη ιστοσελίδα"
+
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    title = "Youth Council of Orestiada"
+    [languages.en.params]
+      description = "Official website"
 
 [params]
+  favicon = ""
+  site_logo = ""
   description = "Επίσημη ιστοσελίδα"
-  # Προσοχή: Στο Ananke η εικόνα λέγεται featured_image
+  featured_image = ""
+  recent_posts_number = 3
