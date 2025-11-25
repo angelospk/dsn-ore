@@ -20,6 +20,19 @@ body {
     text-decoration: none;
 }
 
+/* Ensure header links are white */
+header a,
+nav a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+header a:hover,
+nav a:hover {
+    color: #e2e8f0 !important;
+    opacity: 0.9;
+}
+
 /* Content styling */
 article h1,
 article h2,
@@ -51,13 +64,13 @@ article h3 {
     font-size: 1.125rem;
 }
 
-/* Links */
-a {
+/* Links (general content) */
+main a {
     color: #3b82f6;
     transition: color 0.2s;
 }
 
-a:hover {
+main a:hover {
     color: #1e40af;
 }
 
@@ -77,6 +90,10 @@ a:hover {
 footer {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: #f0f0f0;
+}
+
+footer a {
+    color: #ffffff !important;
 }
 
 /* Language switcher */

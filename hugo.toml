@@ -11,15 +11,15 @@ theme = "ananke"
       description = "Επίσημη ιστοσελίδα"
     [[languages.el.menu.main]]
       name = "Αρχική"
-      url = "/dsn-ore/"
+      url = "/"
       weight = 1
     [[languages.el.menu.main]]
       name = "Νέα"
-      url = "/dsn-ore/posts/"
+      url = "/posts/"
       weight = 2
     [[languages.el.menu.main]]
       name = "Σχετικά"
-      url = "/dsn-ore/about/"
+      url = "/about/"
       weight = 3
 
   [languages.en]
@@ -30,15 +30,15 @@ theme = "ananke"
       description = "Official website"
     [[languages.en.menu.main]]
       name = "Home"
-      url = "/dsn-ore/en/"
+      url = "/en/"
       weight = 1
     [[languages.en.menu.main]]
       name = "News"
-      url = "/dsn-ore/en/posts/"
+      url = "/en/posts/"
       weight = 2
     [[languages.en.menu.main]]
       name = "About"
-      url = "/dsn-ore/en/about/"
+      url = "/en/about/"
       weight = 3
 
 [params]
