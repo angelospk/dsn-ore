@@ -47,7 +47,7 @@ sections:
     design:
       columns: "3"
 
-  - block: about.biography
+  - block: markdown
     id: about
     content:
       title: Σχετικά με Εμάς

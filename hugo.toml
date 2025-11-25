@@ -1,0 +1,101 @@
+title = "ΔΣ Νέων Ορεστιάδας"
+baseURL = "https://angelospk.github.io/dsn-ore/"
+copyright = "© 2025 ΔΣ Νέων Ορεστιάδας"
+defaultContentLanguage = "el"
+hasCJKLanguage = false
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+[services]
+  [services.googleAnalytics]
+    id = "UA-000000-2" # Placeholder
+
+# Hugo Blox Builder Module
+[module]
+  [[module.imports]]
+    path = "github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5"
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON", "WebAppManifest"]
+  section = ["HTML", "RSS"]
+
+[mediaTypes."application/manifest+json"]
+  suffixes = ["webmanifest"]
+
+[outputFormats.WebAppManifest]
+  mediaType = "application/manifest+json"
+  rel = "manifest"
+
+[permalinks]
+  post = "/:slug/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Security configuration for Hugo Blox
+[security.funcs]
+  getenv = ['^HUGO_', '^CI$', '^WC_']
+
+[params]
+  # Theme customization
+  color = "ocean"
+  show_theme_switcher = true
+  
+  # Search configuration
+  [params.search]
+    provider = "wowchemy"
+    algolia = { appId = "", apiKey = "", indexName = "" }
+
+  [params.edit_page]
+    repo_url = "https://github.com/angelospk/dsn-ore"
+    editable = false
+
+  # Marketing configuration
+  [params.marketing]
+    [params.marketing.analytics]
+      google_analytics = ""
+      baidu_tongji = ""
+      google_tag_manager = ""
+
+  # Features configuration
+  [params.features]
+    [params.features.syntax_highlighter]
+      enable = true
+      theme = "github-light"
+    [params.features.math]
+      enable = false
+    [params.features.privacy_pack]
+      enable = false
+
+  [params.header]
+    navbar_style = "light"
+    navbar_font = "sans-serif"
+
+  [params.footer]
+    copyright = { notice = "© {year} ΔΣ Νέων Ορεστιάδας", license = { enable = false } }
+
+  [params.icon]
+    pack = "fas"
+
+[menu]
+  [[menu.main]]
+    name = "Αρχική"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Νέα"
+    url = "/post/"
+    weight = 20
+  [[menu.main]]
+    name = "Σχετικά"
+    url = "/#about"
+    weight = 30
+  [[menu.main]]
+    name = "Επικοινωνία"
+    url = "/#contact"
+    weight = 40

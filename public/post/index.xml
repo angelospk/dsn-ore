@@ -1,20 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on ΔΣ Νέων Ορεστιάδας</title>
+    <title>Posts | ΔΣ Νέων Ορεστιάδας</title>
     <link>https://angelospk.github.io/dsn-ore/post/</link>
-    <description>Recent content in Posts on ΔΣ Νέων Ορεστιάδας</description>
-    <generator>Hugo</generator>
-    <language>el</language>
-    <copyright>© 2025 ΔΣ Νέων Ορεστιάδας</copyright>
-    <lastBuildDate>Tue, 25 Nov 2025 12:00:00 +0200</lastBuildDate>
-    <atom:link href="https://angelospk.github.io/dsn-ore/post/index.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="https://angelospk.github.io/dsn-ore/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>el</language><copyright>© 2025 ΔΣ Νέων Ορεστιάδας</copyright><lastBuildDate>Tue, 25 Nov 2025 18:58:00 +0000</lastBuildDate>
+    <image>
+      <url>https://angelospk.github.io/dsn-ore/media/icon_hu_43cf117bf1a42c34.png</url>
+      <title>Posts</title>
+      <link>https://angelospk.github.io/dsn-ore/post/</link>
+    </image>
+    
+    <item>
+      <title>new</title>
+      <link>https://angelospk.github.io/dsn-ore/new/</link>
+      <pubDate>Tue, 25 Nov 2025 18:58:00 +0000</pubDate>
+      <guid>https://angelospk.github.io/dsn-ore/new/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;neo&lt;/li&gt;
+&lt;li&gt;neo&lt;/li&gt;
+&lt;li&gt;pio neo&lt;/li&gt;
+&lt;li&gt;pio pio neo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://angelospk.github.io/dsn-ore/uploads/Christos%20-%202025-10-13%2013.12.10.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://angelospk.github.io/dsn-ore/uploads/resume.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;resume&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;quote&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;func&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://angelospk.github.io/dsn-ore/test/</link>
+      <pubDate>Tue, 25 Nov 2025 18:19:00 +0000</pubDate>
+      <guid>https://angelospk.github.io/dsn-ore/test/</guid>
+      <description>&lt;p&gt;τεστ κείμενο&lt;/p&gt;
+&lt;p&gt;neo update&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>Η ιστοσελίδα μας είναι στον αέρα!</title>
       <link>https://angelospk.github.io/dsn-ore/%CE%B7-%CE%B9%CF%83%CF%84%CE%BF%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-%CE%BC%CE%B1%CF%82-%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9-%CF%83%CF%84%CE%BF%CE%BD-%CE%B1%CE%AD%CF%81%CE%B1/</link>
       <pubDate>Tue, 25 Nov 2025 12:00:00 +0200</pubDate>
       <guid>https://angelospk.github.io/dsn-ore/%CE%B7-%CE%B9%CF%83%CF%84%CE%BF%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-%CE%BC%CE%B1%CF%82-%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9-%CF%83%CF%84%CE%BF%CE%BD-%CE%B1%CE%AD%CF%81%CE%B1/</guid>
-      <description>Μια νέα ψηφιακή αρχή για το ΔΣ Νέων Ορεστιάδας.</description>
+      <description>&lt;p&gt;Είμαστε πολύ χαρούμενοι που σας καλωσορίζουμε στη νέα μας ψηφιακή στέγη!&lt;/p&gt;
+&lt;p&gt;Από εδώ και πέρα, μέσα από αυτό το site θα μπορείτε:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Να μαθαίνετε πρώτοι για τις &lt;strong&gt;εκδηλώσεις&lt;/strong&gt; και τα πάρτι μας.&lt;/li&gt;
+&lt;li&gt;Να διαβάζετε τα &lt;strong&gt;πρακτικά&lt;/strong&gt; και τις αποφάσεις των συνεδριάσεων.&lt;/li&gt;
+&lt;li&gt;Να κατεβάζετε χρήσιμο υλικό και οδηγούς για την πόλη.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
+    
   </channel>
 </rss>
