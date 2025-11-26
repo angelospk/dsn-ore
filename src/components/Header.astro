@@ -9,9 +9,8 @@ import Search from "./Search.astro";
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<Search />
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/dsn-ore/blog">Νέα</HeaderLink>
+			<HeaderLink href="/dsn-ore/about">Σχετικά</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
@@ -62,6 +61,7 @@ import Search from "./Search.astro";
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		position: relative; /* For search dropdown positioning */
 	}
 	h2 {
 		margin: 0;
