@@ -1,10 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import { BASE_URL } from "../consts";
 
 const posts = (await getCollection("blog"))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 3);
+
+const base = BASE_URL === "/" ? "" : BASE_URL;
 ---
 
 <BaseLayout
@@ -41,7 +44,7 @@ const posts = (await getCollection("blog"))
 					λύσεις έρχονται όταν συμμετέχουμε.
 				</p>
 				<div style="margin-top: 2rem;">
-					<a href="/dsn-ore/about" class="btn btn-primary">
+					<a href={`${base}/about`} class="btn btn-primary">
 						Περισσότερα για τον θεσμό</a
 					>
 				</div>
@@ -94,7 +97,7 @@ const posts = (await getCollection("blog"))
 				{
 					posts.map((post) => (
 						<a
-							href={`/dsn-ore/blog/${post.id}/`}
+							href={`${base}/blog/${post.id}/`}
 							class="news-card fade-in"
 							style="text-decoration: none;"
 						>
@@ -119,7 +122,7 @@ const posts = (await getCollection("blog"))
 				}
 			</div>
 			<div style="text-align: center; margin-top: 3rem;">
-				<a href="/dsn-ore/blog" class="btn btn-primary fade-in"
+				<a href={`${base}/blog`} class="btn btn-primary fade-in"
 					>Όλα τα νέα →</a
 				>
 			</div>
@@ -139,7 +142,7 @@ const posts = (await getCollection("blog"))
 				style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;"
 			>
 				<a
-					href="https://instagram.com"
+					href="https://www.instagram.com/orestias_youth_council/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="feature-card fade-in"
@@ -151,14 +154,12 @@ const posts = (await getCollection("blog"))
 					</p>
 				</a>
 				<a
-					href="mailto:dsn-orestiadas@example.com"
+					href="mailto:dsnorestiada@gmail.com"
 					class="feature-card fade-in"
 					style="max-width: 400px; text-decoration: none; color: inherit;"
 				>
 					<h3 class="feature-title">Email</h3>
-					<p class="feature-description">
-						dsn-orestiadas@example.com
-					</p>
+					<p class="feature-description">dsnorestiada@gmail.com</p>
 				</a>
 			</div>
 			<div style="text-align: center; margin-top: 3rem;">

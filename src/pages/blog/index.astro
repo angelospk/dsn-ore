@@ -1,29 +1,42 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { BASE_URL } from "../../consts";
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const base = BASE_URL === "/" ? "" : BASE_URL;
 ---
 
-<BaseLayout title="Νέα & Ανακοινώσεις" description="Όλα τα τελευταία νέα και οι δράσεις του ΔΣ Νέων Ορεστιάδας.">
+<BaseLayout
+	title="Νέα & Ανακοινώσεις"
+	description="Όλα τα τελευταία νέα και οι δράσεις του ΔΣ Νέων Ορεστιάδας."
+>
 	<section class="blog-index">
 		<div class="container">
 			<h1 class="section-title fade-in">Νέα & Ανακοινώσεις</h1>
-			<p class="section-subtitle fade-in">Διαβάστε για τις δράσεις και τις πρωτοβουλίες μας</p>
-			
+			<p class="section-subtitle fade-in">
+				Διαβάστε για τις δράσεις και τις πρωτοβουλίες μας
+			</p>
+
 			<div class="news-grid">
 				{
 					posts.map((post) => (
-						<a href={`/dsn-ore/blog/${post.id}/`} class="news-card fade-in" style="text-decoration: none;">
+						<a
+							href={`${base}/blog/${post.id}/`}
+							class="news-card fade-in"
+							style="text-decoration: none;"
+						>
 							<div class="news-content">
 								<div class="news-date">
 									<FormattedDate date={post.data.pubDate} />
 								</div>
 								<h3 class="news-title">{post.data.title}</h3>
-								<p class="news-excerpt">{post.data.description}</p>
+								<p class="news-excerpt">
+									{post.data.description}
+								</p>
 							</div>
 						</a>
 					))

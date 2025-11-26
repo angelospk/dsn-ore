@@ -2,6 +2,9 @@
 import "../styles/global.css";
 import ThemeIcon from "../components/ThemeIcon.astro";
 import Search from "../components/Search.astro";
+import { BASE_URL } from "../consts";
+
+const base = BASE_URL === "/" ? "" : BASE_URL;
 
 interface Props {
 	title: string;
@@ -27,10 +30,10 @@ const { title, description = "ΔΣ Νέων Ορεστιάδας" } = Astro.prop
 			<div class="container">
 				<div class="logo"></div>
 				<ul>
-					<li><a href="/dsn-ore/blog">Νέα</a></li>
-					<li><a href="/dsn-ore/#features">Δράσεις</a></li>
-					<li><a href="/dsn-ore/about">Σχετικά</a></li>
-					<li><a href="/dsn-ore/#contact">Επικοινωνία</a></li>
+					<li><a href={`${base}/blog`}>Νέα</a></li>
+					<li><a href={`${base}/#features`}>Δράσεις</a></li>
+					<li><a href={`${base}/about`}>Σχετικά</a></li>
+					<li><a href={`${base}/#contact`}>Επικοινωνία</a></li>
 					<li><ThemeIcon /></li>
 					<li><Search /></li>
 				</ul>
@@ -65,7 +68,7 @@ const { title, description = "ΔΣ Νέων Ορεστιάδας" } = Astro.prop
 							style="display: flex; margin-top: 1rem; gap: 1rem;"
 						>
 							<a
-								href="/dsn-ore/rss.xml"
+								href={`${base}/rss.xml`}
 								aria-label="RSS Feed"
 								title="RSS Feed"
 							>
@@ -86,7 +89,7 @@ const { title, description = "ΔΣ Νέων Ορεστιάδας" } = Astro.prop
 								>
 							</a>
 							<a
-								href="https://instagram.com"
+								href="https://www.instagram.com/orestias_youth_council/"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Instagram"
@@ -118,7 +121,7 @@ const { title, description = "ΔΣ Νέων Ορεστιάδας" } = Astro.prop
 								>
 							</a>
 							<a
-								href="https://facebook.com"
+								href="https://www.facebook.com/orestiasyouthcouncil"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Facebook"
@@ -140,7 +143,7 @@ const { title, description = "ΔΣ Νέων Ορεστιάδας" } = Astro.prop
 								>
 							</a>
 							<a
-								href="mailto:dsn-orestiadas@example.com"
+								href="mailto:dsnorestiada@gmail.com"
 								aria-label="Email"
 								title="Email"
 							>
