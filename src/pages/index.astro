@@ -1,23 +1,50 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-).slice(0, 3);
+const posts = (await getCollection("blog"))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
 ---
 
-<BaseLayout title="ΔΣ Νέων Ορεστιάδας" description="Η επίσημη φωνή των νέων της πόλης μας.">
+<BaseLayout
+	title="ΔΣ Νέων Ορεστιάδας"
+	description="Η επίσημη φωνή των νέων της πόλης μας."
+>
 	<!-- Hero Section -->
 	<section class="hero" id="home">
 		<div class="hero-bg"></div>
 		<div class="particles" id="particles"></div>
 		<div class="hero-content">
 			<h1>Δημοτικό Συμβούλιο Νέων Ορεστιάδας</h1>
-			<p>Η επίσημη φωνή των νέων της πόλης μας.<br>Ελάτε να διαμορφώσουμε το μέλλον μαζί.</p>
+			<p class="subtitle">Η φωνή των νέων του δήμου μας.</p>
+			<p>Ελάτε να διαμορφώσουμε το μέλλον μαζί.</p>
 			<div class="cta-buttons">
-				<a href="#features" class="btn btn-primary">Μάθετε Περισσότερα</a>
+				<a href="#description" class="btn btn-primary"
+					>Μάθετε περισσότερα</a
+				>
 				<a href="#contact" class="btn btn-secondary">Επικοινωνία →</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Description Section -->
+	<section class="description" id="description">
+		<div class="container">
+			<div class="description-content fade-in">
+				<h3>
+					Μην μένεις στο "διαβάστηκε".<br />Μίλα εκεί που ακούγεσαι.
+				</h3>
+				<p>
+					Η φωνή των νέων δεν πρέπει να είναι απλώς ένα σύνθημα, αλλά
+					θεσμός. Από την καθημερινότητα μέχρι το μέλλον της πόλης, οι
+					λύσεις έρχονται όταν συμμετέψουμε.
+				</p>
+				<div style="margin-top: 2rem;">
+					<a href="/dsn-ore/about" class="btn btn-primary"
+						>Διαβάστε περισσότερα για τον θεσμό</a
+					>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -32,21 +59,24 @@ const posts = (await getCollection('blog')).sort(
 					<div class="feature-icon">💡</div>
 					<h3 class="feature-title">Προτάσεις</h3>
 					<p class="feature-description">
-						Καταθέτουμε ολοκληρωμένες προτάσεις στο Δημοτικό Συμβούλιο για θέματα νεολαίας.
+						Καταθέτουμε ολοκληρωμένες προτάσεις στο Δημοτικό
+						Συμβούλιο για θέματα νεολαίας.
 					</p>
 				</div>
 				<div class="feature-card fade-in">
 					<div class="feature-icon">📅</div>
 					<h3 class="feature-title">Εκδηλώσεις</h3>
 					<p class="feature-description">
-						Διοργανώνουμε πολιτιστικές και ψυχαγωγικές εκδηλώσεις για όλους.
+						Διοργανώνουμε πολιτιστικές και ψυχαγωγικές εκδηλώσεις
+						για όλους.
 					</p>
 				</div>
 				<div class="feature-card fade-in">
 					<div class="feature-icon">🤝</div>
 					<h3 class="feature-title">Εθελοντισμός</h3>
 					<p class="feature-description">
-						Συμμετέχουμε ενεργά σε δράσεις αλληλεγγύης και περιβάλλοντος.
+						Συμμετέχουμε ενεργά σε δράσεις αλληλεγγύης και
+						περιβάλλοντος.
 					</p>
 				</div>
 			</div>
@@ -57,61 +87,102 @@ const posts = (await getCollection('blog')).sort(
 	<section class="news" id="news">
 		<div class="container">
 			<h2 class="section-title fade-in">Τελευταία Νέα</h2>
-			<p class="section-subtitle fade-in">Μείνετε ενημερωμένοι για τις δράσεις μας</p>
+			<p class="section-subtitle fade-in">
+				Μείνετε ενημερωμένοι για τις δράσεις μας
+			</p>
 			<div class="news-grid">
 				{
 					posts.map((post) => (
-						<a href={`/dsn-ore/blog/${post.id}/`} class="news-card fade-in" style="text-decoration: none;">
+						<a
+							href={`/dsn-ore/blog/${post.id}/`}
+							class="news-card fade-in"
+							style="text-decoration: none;"
+						>
 							<div class="news-content">
 								<div class="news-date">
-									{post.data.pubDate.toLocaleDateString('el-GR', {
-										year: 'numeric',
-										month: 'short',
-										day: 'numeric',
-									})}
+									{post.data.pubDate.toLocaleDateString(
+										"el-GR",
+										{
+											year: "numeric",
+											month: "short",
+											day: "numeric",
+										},
+									)}
 								</div>
 								<h3 class="news-title">{post.data.title}</h3>
-								<p class="news-excerpt">{post.data.description}</p>
+								<p class="news-excerpt">
+									{post.data.description}
+								</p>
 							</div>
 						</a>
 					))
 				}
 			</div>
 			<div style="text-align: center; margin-top: 3rem;">
-				<a href="/dsn-ore/blog" class="btn btn-primary fade-in">Όλα τα νέα →</a>
+				<a href="/dsn-ore/blog" class="btn btn-primary fade-in"
+					>Όλα τα νέα →</a
+				>
 			</div>
 		</div>
 	</section>
 
 	<!-- Contact Section -->
-	<section class="features" id="contact" style="background: var(--bg-color-alt); transition: background-color 0.3s;">
+	<section
+		class="features"
+		id="contact"
+		style="background: var(--bg-color-alt); transition: background-color 0.3s;"
+	>
 		<div class="container">
 			<h2 class="section-title fade-in">Επικοινωνία</h2>
 			<p class="section-subtitle fade-in">Ελάτε σε επαφή μαζί μας</p>
-			<div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-				<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="feature-card fade-in" style="max-width: 400px; text-decoration: none; color: inherit;">
+			<div
+				style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;"
+			>
+				<a
+					href="https://instagram.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="feature-card fade-in"
+					style="max-width: 400px; text-decoration: none; color: inherit;"
+				>
 					<h3 class="feature-title">Instagram</h3>
-					<p class="feature-description">Ακολουθήστε μας για άμεση ενημέρωση</p>
+					<p class="feature-description">
+						Ακολουθήστε μας για άμεση ενημέρωση
+					</p>
 				</a>
-				<a href="mailto:dsn-orestiadas@example.com" class="feature-card fade-in" style="max-width: 400px; text-decoration: none; color: inherit;">
+				<a
+					href="mailto:dsn-orestiadas@example.com"
+					class="feature-card fade-in"
+					style="max-width: 400px; text-decoration: none; color: inherit;"
+				>
 					<h3 class="feature-title">Email</h3>
-					<p class="feature-description">dsn-orestiadas@example.com</p>
+					<p class="feature-description">
+						dsn-orestiadas@example.com
+					</p>
 				</a>
+			</div>
+			<div style="text-align: center; margin-top: 3rem;">
+				<a
+					href="https://forms.gle/mcghiMC56h3aDmCH6"
+					target="_blank"
+					class="btn btn-primary fade-in">Στείλε μας την ιδέα σου</a
+				>
 			</div>
 		</div>
 	</section>
 
 	<script>
 		// Create particles
-		const particlesContainer = document.getElementById('particles');
+		const particlesContainer = document.getElementById("particles");
 		if (particlesContainer) {
 			for (let i = 0; i < 50; i++) {
-				const particle = document.createElement('div');
-				particle.className = 'particle';
-				particle.style.left = Math.random() * 100 + '%';
-				particle.style.top = Math.random() * 100 + '%';
-				particle.style.animationDelay = Math.random() * 20 + 's';
-				particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+				const particle = document.createElement("div");
+				particle.className = "particle";
+				particle.style.left = Math.random() * 100 + "%";
+				particle.style.top = Math.random() * 100 + "%";
+				particle.style.animationDelay = Math.random() * 20 + "s";
+				particle.style.animationDuration =
+					Math.random() * 10 + 15 + "s";
 				particlesContainer.appendChild(particle);
 			}
 		}
@@ -132,15 +203,25 @@ const posts = (await getCollection('blog')).sort(
 		.hero-bg {
 			position: absolute;
 			inset: 0;
-			background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+			background: linear-gradient(
+				135deg,
+				#1e3a8a 0%,
+				#3b82f6 50%,
+				#60a5fa 100%
+			);
 			opacity: 0.9;
 			animation: gradientShift 15s ease infinite;
 			background-size: 200% 200%;
 		}
 
 		@keyframes gradientShift {
-			0%, 100% { background-position: 0% 50%; }
-			50% { background-position: 100% 50%; }
+			0%,
+			100% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
 		}
 
 		.particles {
@@ -158,10 +239,19 @@ const posts = (await getCollection('blog')).sort(
 		}
 
 		@keyframes float {
-			0%, 100% { transform: translateY(0) translateX(0); }
-			25% { transform: translateY(-100px) translateX(50px); }
-			50% { transform: translateY(-200px) translateX(-50px); }
-			75% { transform: translateY(-100px) translateX(100px); }
+			0%,
+			100% {
+				transform: translateY(0) translateX(0);
+			}
+			25% {
+				transform: translateY(-100px) translateX(50px);
+			}
+			50% {
+				transform: translateY(-200px) translateX(-50px);
+			}
+			75% {
+				transform: translateY(-100px) translateX(100px);
+			}
 		}
 
 		.hero-content {
@@ -232,7 +322,7 @@ const posts = (await getCollection('blog')).sort(
 			padding: 6rem 2rem;
 			background: var(--bg-color-alt);
 			position: relative;
-            transition: background-color 0.3s;
+			transition: background-color 0.3s;
 		}
 
 		.feature-grid {
@@ -292,7 +382,7 @@ const posts = (await getCollection('blog')).sort(
 		.news {
 			padding: 6rem 2rem;
 			background: var(--bg-color);
-            transition: background-color 0.3s;
+			transition: background-color 0.3s;
 		}
 
 		.news-grid {
@@ -339,10 +429,46 @@ const posts = (await getCollection('blog')).sort(
 			line-height: 1.6;
 		}
 
+		/* Description Section */
+		.description {
+			padding: 8rem 2rem;
+			background: var(--bg-color);
+			text-align: center;
+		}
+
+		.description-content {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.description-content h3 {
+			font-size: 2.5rem;
+			margin-bottom: 2rem;
+			color: var(--text-color);
+			line-height: 1.2;
+			font-weight: 800;
+		}
+
+		.description-content p {
+			font-size: 1.3rem;
+			color: var(--text-muted);
+			line-height: 1.8;
+			margin-bottom: 2.5rem;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		@media (max-width: 768px) {
-			.hero h1 { font-size: 2.5rem; }
-			.hero p { font-size: 1.2rem; }
-			.section-title { font-size: 2rem; }
+			.hero h1 {
+				font-size: 2.5rem;
+			}
+			.hero p {
+				font-size: 1.2rem;
+			}
+			.section-title {
+				font-size: 2rem;
+			}
 		}
 	</style>
 </BaseLayout>

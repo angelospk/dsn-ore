@@ -1,100 +1,162 @@
 ---
-import '@pagefind/default-ui/css/ui.css';
+import "@pagefind/default-ui/css/ui.css";
 ---
 
-<div id="search" class="ml-3"></div>
+<div id="search" data-debug="true"></div>
 
 <script>
-	window.addEventListener('DOMContentLoaded', (event) => {
-		new PagefindUI({
-			element: '#search',
-			showSubResults: true,
+    import { PagefindUI } from "@pagefind/default-ui";
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+        new PagefindUI({
+            element: "#search",
+            bundlePath:
+                import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
+            showSubResults: true,
+            showImages: false,
             translations: {
                 placeholder: "Αναζήτηση...",
                 clear_search: "Καθαρισμός",
-                load_more: "Περισσότερα αποτελέσματα",
+                load_more: "Φόρτωση περισσότερων αποτελεσμάτων",
                 search_label: "Αναζήτηση σε αυτό το site",
                 filters_label: "Φίλτρα",
                 zero_results: "Δεν βρέθηκαν αποτελέσματα για [SEARCH_TERM]",
                 many_results: "[COUNT] αποτελέσματα για [SEARCH_TERM]",
                 one_result: "[COUNT] αποτέλεσμα για [SEARCH_TERM]",
-                alt_search: "Δεν βρέθηκαν αποτελέσματα για [SEARCH_TERM]. Μήπως εννοούσατε [DIFFERENT_TERM];",
-                search_suggestion: "Δεν βρέθηκαν αποτελέσματα για [SEARCH_TERM]. Δοκιμάστε μία από τις παρακάτω αναζητήσεις:",
-                searching: "Αναζήτηση για [SEARCH_TERM]..."
-            }
-		});
-	});
+                alt_search:
+                    "Μήπως εννοούσατε: [SEARCH_TERM] - ([COUNT] αποτελέσματα)",
+            },
+        });
+    });
 </script>
 
 <style is:global>
-    /* Ensure the search container has dimensions */
+    /* Ensure the search container has dimensions even if empty */
     #search {
-        min-width: 200px;
         min-height: 40px;
         display: flex;
         align-items: center;
+        justify-content: flex-end;
     }
-    
+
     /* Pagefind Overrides */
     :root {
         --pagefind-ui-scale: 0.75;
         --pagefind-ui-primary: #3b82f6;
         --pagefind-ui-text: var(--text-color);
-        --pagefind-ui-background: var(--card-bg);
+        --pagefind-ui-background: var(--bg-color);
         --pagefind-ui-border: var(--card-border);
         --pagefind-ui-tag: var(--card-border);
         --pagefind-ui-border-width: 1px;
         --pagefind-ui-border-radius: 8px;
         --pagefind-ui-image-border-radius: 8px;
         --pagefind-ui-image-box-ratio: 3 / 2;
-        --pagefind-ui-font: 'Segoe UI', sans-serif;
+        --pagefind-ui-font: "Segoe UI", sans-serif;
     }
 
     #search .pagefind-ui__search-input {
-        background-color: var(--bg-color);
+        background-color: transparent;
         color: var(--text-color);
-        border: 1px solid var(--card-border);
-        padding: 0.5rem 1rem;
+        border: 1px solid transparent;
+        padding: 0; /* Remove padding to use height for centering */
+        height: 40px; /* Match header item height */
+        line-height: 40px;
+        padding-left: 2.5rem; /* Space for icon */
         border-radius: 20px;
         font-size: 0.9rem;
-        width: 200px;
-        transition: all 0.3s;
+        width: 40px; /* Start small (icon only essentially) */
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--text-color);
+        border: 1px solid transparent;
+        padding: 0; /* Remove padding to use height for centering */
+        height: 40px; /* Match header item height */
+        line-height: 40px;
+        padding-left: 2.5rem; /* Space for icon */
+        border-radius: 20px;
+        font-size: 0.9rem;
+        width: 40px; /* Start small (icon only essentially) */
+        transition: all 0.3s ease;
+        cursor: pointer;
+        /* background-image removed to avoid double icon */
+        background-repeat: no-repeat;
+        background-position: 11px center;
+        color: transparent; /* Hide placeholder initially */
+        color: transparent; /* Hide placeholder initially */
     }
 
-    #search .pagefind-ui__search-input:focus {
-        border-color: #3b82f6;
-        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
-        outline: none;
+    #search .pagefind-ui__search-input::placeholder {
+        color: transparent;
+    }
+
+    #search .pagefind-ui__search-input:focus,
+    #search .pagefind-ui__search-input:not(:placeholder-shown) {
+        width: 220px;
+        background-color: var(--bg-color);
+        border-color: var(--card-border);
+        cursor: text;
+        color: var(--text-color);
+    }
+
+    #search .pagefind-ui__search-input:focus::placeholder {
+        color: var(--text-muted);
     }
 
     #search .pagefind-ui__search-clear {
         background-color: transparent;
         color: var(--text-muted);
+        padding: 0;
+        margin-right: 10px;
     }
-    
+
     #search .pagefind-ui__drawer {
-        background-color: var(--card-bg);
+        background-color: var(--bg-color); /* Solid background from theme */
         backdrop-filter: blur(12px);
         border: 1px solid var(--card-border);
         border-radius: 12px;
         padding: 1rem;
         position: absolute;
         right: 0;
-        top: 120%; /* Push it down a bit */
-        width: 350px;
-        max-height: 500px;
+        top: 120%;
+        width: 320px;
+        max-height: 400px;
         overflow-y: auto;
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        box-shadow:
+            0 10px 25px -5px rgba(0, 0, 0, 0.1),
+            0 8px 10px -6px rgba(0, 0, 0, 0.1);
         z-index: 1001;
+    }
+
+    #search .pagefind-ui__result {
+        border-bottom: 1px solid var(--gray-light);
+        padding: 10px 0;
+    }
+
+    #search .pagefind-ui__result:last-child {
+        border-bottom: none;
     }
 
     #search .pagefind-ui__result-link {
         color: var(--text-color);
         font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    #search .pagefind-ui__result-link:hover {
+        text-decoration: underline;
     }
 
     #search .pagefind-ui__result-excerpt {
         color: var(--text-muted);
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-top: 4px;
+    }
+
+    /* Hide the "Search this site" label to save space */
+    #search .pagefind-ui__search-label {
+        display: none;
     }
 </style>
